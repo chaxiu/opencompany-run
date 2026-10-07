@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Company</title>
+  <meta name="description" content="这一站将是官方公司的画廊，你可以 Fork 它们。模板还在准备。">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230969da'/%3E%3Crect x='7' y='8' width='7' height='16' rx='1.5' fill='white'/%3E%3Crect x='18' y='8' width='7' height='16' rx='1.5' fill='white' fill-opacity='0.72'/%3E%3C/svg%3E">
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("opencompany-run-lang"); } catch (e) {}
+      var lang = saved === "en" || saved === "zh"
+        ? saved
+        : (navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+      document.documentElement.dataset.lang = lang;
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">
+    <span class="zh">跳到正文</span>
+    <span class="en">Skip to content</span>
+  </a>
+
+  <div class="banner">
+    <div class="container">
+      <p class="zh" id="status-zh">模板还在准备</p>
+      <p class="en" id="status-en">Templates are still being prepared</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="./">Open Company</a>
+      <nav class="header-links" aria-label="Sites">
+        <a href="https://open-company.org">
+          <span class="zh">规范</span>
+          <span class="en">Specification</span>
+        </a>
+        <a href="https://munk.sh">Munk AI</a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container hero">
+      <p class="eyebrow">opencompany.run</p>
+      <h1>Open Company</h1>
+      <p class="lede zh">这一站将是官方公司的画廊，你可以 Fork 它们。</p>
+      <p class="lede en">This site will be a gallery of official companies you can fork.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://open-company.org">
+          <span class="zh">规范站</span>
+          <span class="en">Specification</span>
+        </a>
+        <a class="btn btn-secondary" href="https://munk.sh">Munk AI</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-bar">
+      <p class="footer-brand">Open Company</p>
+      <p class="footer-note">opencompany.run</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var KEY = "opencompany-run-lang";
+      var copy = {
+        zh: {
+          title: "Open Company",
+          description: "这一站将是官方公司的画廊，你可以 Fork 它们。模板还在准备。"
+        },
+        en: {
+          title: "Open Company",
+          description: "This site will be a gallery of official companies you can fork. Templates are still being prepared."
+        }
+      };
+
+      function apply(lang) {
+        var page = copy[lang] || copy.zh;
+        document.documentElement.dataset.lang = lang;
+        document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+        document.title = page.title;
+        var description = document.querySelector('meta[name="description"]');
+        if (description) description.setAttribute("content", page.description);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+
+      apply(document.documentElement.dataset.lang === "en" ? "en" : "zh");
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          var lang = button.getAttribute("data-set-lang");
+          if (lang !== "zh" && lang !== "en") return;
+          try { localStorage.setItem(KEY, lang); } catch (e) {}
+          apply(lang);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
