@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="brand/logo.svg" alt="Open Company" width="96">
+</p>
+
 # opencompany.run
 
 [中文](README.zh-CN.md)
