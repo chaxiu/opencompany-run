@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open Company</title>
-  <meta name="description" content="这一站将是官方公司的画廊，你可以 Fork 它们。模板还在准备。">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230969da'/%3E%3Crect x='7' y='8' width='7' height='16' rx='1.5' fill='white'/%3E%3Crect x='18' y='8' width='7' height='16' rx='1.5' fill='white' fill-opacity='0.72'/%3E%3C/svg%3E">
+  <title>公司目录 · Open Company</title>
+  <meta name="description" content="可以拿来用的公司会列在这里。每家公司是一个目录。第一批还在整理。">
+  <link rel="stylesheet" href="styles.css?v=2">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <script>
     (function () {
       var saved = null;
@@ -27,14 +29,14 @@
 
   <div class="banner">
     <div class="container">
-      <p class="zh" id="status-zh">模板还在准备</p>
-      <p class="en" id="status-en">Templates are still being prepared</p>
+      <p class="zh" id="status-zh">第一批公司还在整理。</p>
+      <p class="en" id="status-en">The first companies are still being prepared.</p>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="wordmark" href="./">Open Company</a>
+      <a class="wordmark" href="./"><img src="brand/logo.svg" alt="" width="22" height="22">Open Company</a>
       <nav class="header-links" aria-label="Sites">
         <a href="https://open-company.org">
           <span class="zh">规范</span>
@@ -52,15 +54,21 @@
   <main id="main">
     <div class="container hero">
       <p class="eyebrow">opencompany.run</p>
-      <h1>Open Company</h1>
-      <p class="lede zh">这一站将是官方公司的画廊，你可以 Fork 它们。</p>
-      <p class="lede en">This site will be a gallery of official companies you can fork.</p>
+      <h1>
+        <span class="zh">公司目录</span>
+        <span class="en">Company directory</span>
+      </h1>
+      <p class="lede zh">这里会列出可以拿来用的公司。每家公司是一个目录：产品、运营，以及做事的方法，都写在文件里。复制到你自己的环境之后，这家公司就是你的。</p>
+      <p class="lede en">Companies you can start from will be listed here. Each company is a directory. The product, the operations, and the way the work gets done are files. After you copy it into your own environment, the company is yours.</p>
       <div class="actions">
         <a class="btn btn-primary" href="https://open-company.org">
-          <span class="zh">规范站</span>
-          <span class="en">Specification</span>
+          <span class="zh">阅读规范</span>
+          <span class="en">Read the specification</span>
         </a>
-        <a class="btn btn-secondary" href="https://munk.sh">Munk AI</a>
+        <a class="btn btn-secondary" href="https://munk.sh">
+          <span class="zh">用 Munk AI 运行</span>
+          <span class="en">Run with Munk AI</span>
+        </a>
       </div>
     </div>
   </main>
@@ -77,12 +85,12 @@
       var KEY = "opencompany-run-lang";
       var copy = {
         zh: {
-          title: "Open Company",
-          description: "这一站将是官方公司的画廊，你可以 Fork 它们。模板还在准备。"
+          title: "公司目录 · Open Company",
+          description: "可以拿来用的公司会列在这里。每家公司是一个目录。第一批还在整理。"
         },
         en: {
-          title: "Open Company",
-          description: "This site will be a gallery of official companies you can fork. Templates are still being prepared."
+          title: "Company directory · Open Company",
+          description: "Companies you can start from will be listed here. Each company is a directory. The first set is still being prepared."
         }
       };
 
