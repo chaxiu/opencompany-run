@@ -1,17 +1,19 @@
 # opencompany.run
 
-`opencompany.run` 的源码。这一站列出可以拿来用的公司。当前只有占位页：第一批公司还在整理。
+[中文](README.zh-CN.md)
 
-规范在 [open-company.org](https://open-company.org)。Munk AI 在 [munk.sh](https://munk.sh)。
+Source for [opencompany.run](https://opencompany.run), the directory of companies written to the [Open Company](https://open-company.org) specification. Each company is a directory you can copy and run. The first set is still being prepared, so this repository currently serves a placeholder page.
 
-页头和站点图标用同一枚 Open Company 标（`brand/logo.svg`），与规范站相同。
+The specification is at [open-company.org](https://open-company.org). Munk AI, the reference runtime, is at [munk.sh](https://munk.sh).
 
-## 本地预览
+The header and site icons use the same Open Company mark as the specification site (`brand/logo.svg`).
 
-在本目录起一个静态文件服务：
+## Preview locally
+
+Serve this directory:
 
 ```bash
 python3 -m http.server 4321
 ```
 
-打开 <http://127.0.0.1:4321>。页头可切换中文 / English。
+Open <http://127.0.0.1:4321>. The header switches between 中文 and English.
