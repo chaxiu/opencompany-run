@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>公司目录 · Open Company</title>
-  <meta name="description" content="可以拿来用的公司会列在这里。每家公司是一个目录。第一批还在整理。">
-  <link rel="stylesheet" href="styles.css?v=2">
+  <meta name="description" content="可以直接拿来运行的开放公司（Open Company）模板目录。每家公司是一个目录：产品、运营与工程宪章都写在文件里，用 Munk AI 一键导入运行。">
+  <link rel="stylesheet" href="styles.css?v=3">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -27,10 +27,14 @@
     <span class="en">Skip to content</span>
   </a>
 
-  <div class="banner">
-    <div class="container">
-      <p class="zh" id="status-zh">第一批公司还在整理。</p>
-      <p class="en" id="status-en">The first companies are still being prepared.</p>
+  <div class="banner banner-ready">
+    <div class="container banner-inner">
+      <p class="zh" id="status-zh">首批开放公司模板已上线 · 支持一键唤起 Munk AI 桌面端直接导入运行。</p>
+      <p class="en" id="status-en">First Open Company templates are live · One-click launch and import into Munk AI desktop.</p>
+      <a class="banner-link" href="https://github.com/munk-sh/open-company" target="_blank" rel="noopener">
+        <span class="zh">GitHub 模板库 →</span>
+        <span class="en">GitHub Repository →</span>
+      </a>
     </div>
   </div>
 
@@ -38,6 +42,7 @@
     <div class="container header-inner">
       <a class="wordmark" href="./"><img src="brand/logo.svg" alt="" width="22" height="22">Open Company</a>
       <nav class="header-links" aria-label="Sites">
+        <a href="https://github.com/munk-sh/open-company" target="_blank" rel="noopener">GitHub</a>
         <a href="https://open-company.org">
           <span class="zh">规范</span>
           <span class="en">Specification</span>
@@ -53,46 +58,175 @@
 
   <main id="main">
     <div class="container hero">
-      <p class="eyebrow">opencompany.run</p>
+      <p class="eyebrow">opencompany.run · open-company/v0</p>
       <h1>
         <span class="zh">公司目录</span>
         <span class="en">Company directory</span>
       </h1>
-      <p class="lede zh">这里会列出可以拿来用的公司。每家公司是一个目录：产品、运营，以及做事的方法，都写在文件里。复制到你自己的环境之后，这家公司就是你的。</p>
-      <p class="lede en">Companies you can start from will be listed here. Each company is a directory. The product, the operations, and the way the work gets done are files. After you copy it into your own environment, the company is yours.</p>
+      <p class="lede zh">这里列出可以直接拿来运行的开放公司（Open Company）。每家公司是一个标准目录：产品定义、常驻运营任务以及做事的工程宪章都写在文件里。点击「用 Munk AI 运行」即可直接导入到你自己的环境。</p>
+      <p class="lede en">Browse ready-to-run Open Companies. Each company is a directory on disk: products, standing operations, and engineering constitution all live in plain files. Click "Open in Munk AI" to import and run it in your own environment.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="https://open-company.org">
+        <a class="btn btn-primary" href="#catalog">
+          <span class="zh">浏览公司模板</span>
+          <span class="en">Browse templates</span>
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/munk-sh/open-company" target="_blank" rel="noopener">
+          <span class="zh">查看 GitHub 仓库</span>
+          <span class="en">View on GitHub</span>
+        </a>
+        <a class="btn btn-secondary" href="https://open-company.org">
           <span class="zh">阅读规范</span>
           <span class="en">Read the specification</span>
         </a>
-        <a class="btn btn-secondary" href="https://munk.sh">
-          <span class="zh">用 Munk AI 运行</span>
-          <span class="en">Run with Munk AI</span>
-        </a>
       </div>
     </div>
+
+    <section id="catalog" class="container catalog-section" aria-labelledby="catalog-heading">
+      <div class="section-header">
+        <h2 id="catalog-heading">
+          <span class="zh">可运行的公司模板</span>
+          <span class="en">Available Company Templates</span>
+        </h2>
+        <p class="section-sub">
+          <span class="zh">数据源：<code>munk-sh/open-company</code></span>
+          <span class="en">Source: <code>munk-sh/open-company</code></span>
+        </p>
+      </div>
+
+      <div id="catalog-grid" class="catalog-grid">
+        <article class="company-card" data-slug="open-source-software">
+          <div class="card-header">
+            <div>
+              <div class="card-badges">
+                <span class="badge badge-spec">open-company/v0</span>
+                <span class="badge badge-slug">companies/open-source-software</span>
+              </div>
+              <h3 class="card-title">
+                <span class="zh">开源软件公司</span>
+                <span class="en">Open Source Software Company</span>
+              </h3>
+            </div>
+          </div>
+
+          <p class="card-desc zh">孵化、研发、验收并持续运营高品质开源桌面与开发者工具的 AI 软件公司模板（内含 OpenCompare 标杆案例）。</p>
+          <p class="card-desc en">An AI software company template for incubating, building, verifying, and operating production-grade open-source desktop &amp; developer tools (featuring OpenCompare).</p>
+
+          <div class="card-grid">
+            <div class="card-block">
+              <h4>
+                <span class="zh">内含产品案例（1）</span>
+                <span class="en">Included Products (1)</span>
+              </h4>
+              <div class="product-item">
+                <div class="product-head">
+                  <strong>OpenCompare</strong>
+                  <span class="badge badge-live">live</span>
+                  <a href="https://github.com/chaxiu/OpenCompare" target="_blank" rel="noopener">chaxiu/OpenCompare ↗</a>
+                </div>
+                <p class="product-meta zh">包含 7 条常驻运营任务：GitHub 5 分钟应急哨兵、每日 07:00 批次发版、L1 公开包冒烟、L2 大目录负载、L3 CDP/原生窗口实机验收、Issue 自动收口。</p>
+                <p class="product-meta en">Includes 7 standing ops tasks: 5-min GitHub sentinel guard, daily 07:00 batch release, L1 package smoke, L2 large-dir load, L3 CDP &amp; native window QA, and issue closeout.</p>
+              </div>
+            </div>
+
+            <div class="card-block">
+              <h4>
+                <span class="zh">公司级常驻巡检（2）</span>
+                <span class="en">Company Standing Ops (2)</span>
+              </h4>
+              <ul class="ops-list zh">
+                <li><strong>daily-patrol</strong>：每日 21:00 全公司推进对账与跨产品经验提炼</li>
+                <li><strong>computer</strong>：原生桌面操作通道（<code>computer: true</code>）</li>
+              </ul>
+              <ul class="ops-list en">
+                <li><strong>daily-patrol</strong>: Daily 21:00 cross-product progress &amp; experience patrol</li>
+                <li><strong>computer</strong>: Native desktop operator channel (<code>computer: true</code>)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card-import-bar">
+            <div class="import-url-box">
+              <span class="import-label">
+                <span class="zh">模板地址</span>
+                <span class="en">Template URL</span>
+              </span>
+              <code id="url-open-source-software">https://github.com/munk-sh/open-company/tree/main/companies/open-source-software</code>
+            </div>
+            <div class="card-actions">
+              <a
+                class="btn btn-primary btn-wake"
+                data-wake-munk="munk://company/import?url=https%3A%2F%2Fgithub.com%2Fmunk-sh%2Fopen-company%2Ftree%2Fmain%2Fcompanies%2Fopen-source-software"
+                data-source-url="https://github.com/munk-sh/open-company/tree/main/companies/open-source-software"
+                href="munk://company/import?url=https%3A%2F%2Fgithub.com%2Fmunk-sh%2Fopen-company%2Ftree%2Fmain%2Fcompanies%2Fopen-source-software"
+              >
+                <span class="zh">用 Munk AI 运行</span>
+                <span class="en">Open in Munk AI</span>
+              </a>
+              <button
+                type="button"
+                class="btn btn-secondary btn-copy"
+                data-copy-url="https://github.com/munk-sh/open-company/tree/main/companies/open-source-software"
+              >
+                <span class="zh">复制导入链接</span>
+                <span class="en">Copy Import URL</span>
+              </button>
+              <a
+                class="btn btn-secondary"
+                href="https://github.com/munk-sh/open-company/tree/main/companies/open-source-software"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="zh">查看源码</span>
+                <span class="en">View Files</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div id="wake-toast" class="wake-toast" hidden role="status" aria-live="polite">
+        <div class="wake-toast-inner">
+          <p class="zh">
+            <strong>正在唤起 Munk AI 桌面端…</strong>
+            若未弹出窗口，请先<a href="https://munk.sh">下载安装 Munk AI</a>，或在桌面端「导入公司」粘贴上方模板链接。
+          </p>
+          <p class="en">
+            <strong>Launching Munk AI desktop…</strong>
+            If the app did not open, <a href="https://munk.sh">install Munk AI</a> first or paste the template URL in "Import Company".
+          </p>
+          <button type="button" class="toast-close" id="wake-toast-close" aria-label="Close">×</button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-bar">
       <p class="footer-brand">Open Company</p>
-      <p class="footer-note">opencompany.run</p>
+      <p class="footer-note">opencompany.run · Powered by Munk AI</p>
     </div>
   </footer>
 
   <script>
     (function () {
       var KEY = "opencompany-run-lang";
+      var REMOTE_CATALOG = "https://raw.githubusercontent.com/munk-sh/open-company/main/catalog.json";
       var copy = {
         zh: {
           title: "公司目录 · Open Company",
-          description: "可以拿来用的公司会列在这里。每家公司是一个目录。第一批还在整理。"
+          description: "可以直接拿来运行的开放公司（Open Company）模板目录。每家公司是一个目录：产品、运营与工程宪章都写在文件里，用 Munk AI 一键导入运行。",
+          copied: "已复制"
         },
         en: {
           title: "Company directory · Open Company",
-          description: "Companies you can start from will be listed here. Each company is a directory. The first set is still being prepared."
+          description: "Browse ready-to-run Open Company templates. Each company is a directory on disk. One-click import and run with Munk AI.",
+          copied: "Copied"
         }
       };
+
+      function currentLang() {
+        return document.documentElement.dataset.lang === "en" ? "en" : "zh";
+      }
 
       function apply(lang) {
         var page = copy[lang] || copy.zh;
@@ -106,7 +240,107 @@
         });
       }
 
-      apply(document.documentElement.dataset.lang === "en" ? "en" : "zh");
+      function escapeHtml(str) {
+        return String(str || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function renderCatalog(data) {
+        if (!data || !Array.isArray(data.companies) || data.companies.length === 0) return;
+        var grid = document.getElementById("catalog-grid");
+        if (!grid) return;
+
+        grid.innerHTML = data.companies.map(function (c) {
+          var zhName = escapeHtml(c.name && c.name.zh ? c.name.zh : c.slug);
+          var enName = escapeHtml(c.name && c.name.en ? c.name.en : c.slug);
+          var zhDesc = escapeHtml(c.description && c.description.zh ? c.description.zh : "");
+          var enDesc = escapeHtml(c.description && c.description.en ? c.description.en : "");
+          var sourceUrl = escapeHtml(c.sourceUrl);
+          var deepLink = escapeHtml(c.deepLink);
+          var products = Array.isArray(c.products) ? c.products : [];
+          var zhHighlights = c.opsHighlights && Array.isArray(c.opsHighlights.zh) ? c.opsHighlights.zh : [];
+          var enHighlights = c.opsHighlights && Array.isArray(c.opsHighlights.en) ? c.opsHighlights.en : [];
+
+          var productsHtml = products.map(function (p) {
+            var gitShort = (p.git || "").replace(/^https?:\/\/github\.com\//, "");
+            return (
+              '<div class="product-item">' +
+                '<div class="product-head">' +
+                  '<strong>' + escapeHtml(p.title || p.id) + '</strong>' +
+                  '<span class="badge badge-live">' + escapeHtml(p.lifecycle || "live") + '</span>' +
+                  (p.git ? '<a href="' + escapeHtml(p.git) + '" target="_blank" rel="noopener">' + escapeHtml(gitShort) + ' ↗</a>' : '') +
+                '</div>' +
+                '<p class="product-meta zh">包含 ' + Number(p.tasksCount || 0) + ' 条常驻运营任务（' +
+                  (Array.isArray(p.tasks) ? p.tasks.map(function (t) { return escapeHtml(t.id); }).join(" · ") : "") +
+                '）</p>' +
+                '<p class="product-meta en">Includes ' + Number(p.tasksCount || 0) + ' standing ops tasks (' +
+                  (Array.isArray(p.tasks) ? p.tasks.map(function (t) { return escapeHtml(t.id); }).join(" · ") : "") +
+                ')</p>' +
+              '</div>'
+            );
+          }).join("");
+
+          var zhOpsHtml = zhHighlights.map(function (item) {
+            return "<li>" + escapeHtml(item) + "</li>";
+          }).join("");
+          var enOpsHtml = enHighlights.map(function (item) {
+            return "<li>" + escapeHtml(item) + "</li>";
+          }).join("");
+
+          return (
+            '<article class="company-card" data-slug="' + escapeHtml(c.slug) + '">' +
+              '<div class="card-header">' +
+                '<div>' +
+                  '<div class="card-badges">' +
+                    '<span class="badge badge-spec">open-company/v0</span>' +
+                    '<span class="badge badge-slug">companies/' + escapeHtml(c.slug) + '</span>' +
+                  '</div>' +
+                  '<h3 class="card-title">' +
+                    '<span class="zh">' + zhName + '</span>' +
+                    '<span class="en">' + enName + '</span>' +
+                  '</h3>' +
+                '</div>' +
+              '</div>' +
+              '<p class="card-desc zh">' + zhDesc + '</p>' +
+              '<p class="card-desc en">' + enDesc + '</p>' +
+              '<div class="card-grid">' +
+                '<div class="card-block">' +
+                  '<h4><span class="zh">内含产品案例（' + products.length + '）</span><span class="en">Included Products (' + products.length + ')</span></h4>' +
+                  productsHtml +
+                '</div>' +
+                '<div class="card-block">' +
+                  '<h4><span class="zh">公司级常驻巡检（' + Number(c.opsProjectsCount || 0) + '）</span><span class="en">Company Standing Ops (' + Number(c.opsProjectsCount || 0) + ')</span></h4>' +
+                  '<ul class="ops-list zh">' + zhOpsHtml + '</ul>' +
+                  '<ul class="ops-list en">' + enOpsHtml + '</ul>' +
+                '</div>' +
+              '</div>' +
+              '<div class="card-import-bar">' +
+                '<div class="import-url-box">' +
+                  '<span class="import-label"><span class="zh">模板地址</span><span class="en">Template URL</span></span>' +
+                  '<code>' + sourceUrl + '</code>' +
+                '</div>' +
+                '<div class="card-actions">' +
+                  '<a class="btn btn-primary btn-wake" data-wake-munk="' + deepLink + '" data-source-url="' + sourceUrl + '" href="' + deepLink + '">' +
+                    '<span class="zh">用 Munk AI 运行</span><span class="en">Open in Munk AI</span>' +
+                  '</a>' +
+                  '<button type="button" class="btn btn-secondary btn-copy" data-copy-url="' + sourceUrl + '">' +
+                    '<span class="zh">复制导入链接</span><span class="en">Copy Import URL</span>' +
+                  '</button>' +
+                  '<a class="btn btn-secondary" href="' + sourceUrl + '" target="_blank" rel="noopener">' +
+                    '<span class="zh">查看源码</span><span class="en">View Files</span>' +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+            '</article>'
+          );
+        }).join("");
+      }
+
+      apply(currentLang());
+
       document.querySelectorAll("[data-set-lang]").forEach(function (button) {
         button.addEventListener("click", function () {
           var lang = button.getAttribute("data-set-lang");
@@ -115,6 +349,48 @@
           apply(lang);
         });
       });
+
+      document.addEventListener("click", function (event) {
+        var wakeBtn = event.target.closest("[data-wake-munk]");
+        if (wakeBtn) {
+          var toast = document.getElementById("wake-toast");
+          if (toast) toast.hidden = false;
+          return;
+        }
+
+        var copyBtn = event.target.closest("[data-copy-url]");
+        if (copyBtn) {
+          var url = copyBtn.getAttribute("data-copy-url") || "";
+          if (url && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(function () {
+              var originalHtml = copyBtn.innerHTML;
+              var lang = currentLang();
+              copyBtn.textContent = (copy[lang] || copy.zh).copied;
+              setTimeout(function () {
+                copyBtn.innerHTML = originalHtml;
+              }, 1600);
+            }).catch(function () {});
+          }
+        }
+      });
+
+      var closeBtn = document.getElementById("wake-toast-close");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          var toast = document.getElementById("wake-toast");
+          if (toast) toast.hidden = true;
+        });
+      }
+
+      fetch(REMOTE_CATALOG)
+        .then(function (res) { return res.ok ? res.json() : Promise.reject(); })
+        .then(renderCatalog)
+        .catch(function () {
+          return fetch("./catalog.json")
+            .then(function (res) { return res.ok ? res.json() : null; })
+            .then(function (data) { if (data) renderCatalog(data); })
+            .catch(function () {});
+        });
     })();
   </script>
 </body>
