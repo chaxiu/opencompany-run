@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hans" data-lang="zh">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>多 Agent 协作的开放标准 · Open Company</title>
-  <meta name="description" content="用一套纯文本目录定义目标、分工与排班，让来自不同服务商的 Agent 像一家公司一样协同运转。浏览可直接导入运行的团队模板。">
+  <title>An open standard for multi-agent collaboration · Open Company</title>
+  <meta name="description" content="Define goals, roles, and schedules in plain files—so agents from any provider can work together like a company.">
   <link rel="stylesheet" href="styles.css?v=4">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
@@ -13,9 +13,14 @@
     (function () {
       var saved = null;
       try { saved = localStorage.getItem("opencompany-run-lang"); } catch (e) {}
+      var browserLang = (
+        (navigator.languages && navigator.languages[0]) ||
+        navigator.language ||
+        ""
+      ).toLowerCase();
       var lang = saved === "en" || saved === "zh"
         ? saved
-        : (navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en";
+        : browserLang.indexOf("zh") === 0 ? "zh" : "en";
       document.documentElement.dataset.lang = lang;
       document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
     })();
@@ -50,8 +55,8 @@
         <a href="https://munk.sh">Munk AI</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
-        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
       </div>
     </div>
   </header>
@@ -312,11 +317,11 @@
       };
 
       function currentLang() {
-        return document.documentElement.dataset.lang === "en" ? "en" : "zh";
+        return document.documentElement.dataset.lang === "zh" ? "zh" : "en";
       }
 
       function apply(lang) {
-        var page = copy[lang] || copy.zh;
+        var page = copy[lang] || copy.en;
         document.documentElement.dataset.lang = lang;
         document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
         document.title = page.title;
