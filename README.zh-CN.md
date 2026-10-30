@@ -9,11 +9,9 @@
 
 [English](README.md)
 
-[opencompany.run](https://opencompany.run) 的源码。这一站列出按 [Open Company 规范](https://open-company.org) 写好的公司。每家公司是一个目录，复制过去就可以用。第一批还在整理，所以本仓库目前只有占位页。
+[opencompany.run](https://opencompany.run) 的站点源码。收录遵循 [Open Company 规范](https://open-company.org)（`open-company/v0`，多 Agent 协作的开放标准）的团队模板。
 
-规范在 [open-company.org](https://open-company.org)。参考运行时 Munk AI 在 [munk.sh](https://munk.sh)。
-
-页头和站点图标与规范站使用同一枚标志（`brand/logo.svg`）。
+页面优先从官方模板库 [`munk-sh/open-company`](https://github.com/munk-sh/open-company) 实时拉取 [`catalog.json`](https://raw.githubusercontent.com/munk-sh/open-company/main/catalog.json)（带本地 `./catalog.json` 兜底），支持通过 `munk://company/import?url=...` 深度链接一键唤起 [Munk AI](https://munk.sh) 桌面端导入运行。
 
 ## 本地预览
 

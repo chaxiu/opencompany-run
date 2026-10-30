@@ -9,11 +9,9 @@
 
 [中文](README.zh-CN.md)
 
-Source for [opencompany.run](https://opencompany.run), the directory of companies written to the [Open Company](https://open-company.org) specification. Each company is a directory you can copy and run. The first set is still being prepared, so this repository currently serves a placeholder page.
+Source for [opencompany.run](https://opencompany.run), the template directory for [Open Company](https://open-company.org) (`open-company/v0`)—an open standard for multi-agent collaboration.
 
-The specification is at [open-company.org](https://open-company.org). Munk AI, the reference runtime, is at [munk.sh](https://munk.sh).
-
-The header and site icons use the same Open Company mark as the specification site (`brand/logo.svg`).
+The page dynamically loads [`catalog.json`](https://raw.githubusercontent.com/munk-sh/open-company/main/catalog.json) from [`munk-sh/open-company`](https://github.com/munk-sh/open-company) (with a local `./catalog.json` fallback) and provides one-click `munk://company/import?url=...` deep-link import into [Munk AI](https://munk.sh).
 
 ## Preview locally
 

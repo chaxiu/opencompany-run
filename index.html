@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>多 Agent 协作的开放标准 · Open Company</title>
   <meta name="description" content="用一套纯文本目录定义目标、分工与排班，让来自不同服务商的 Agent 像一家公司一样协同运转。浏览可直接导入运行的团队模板。">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -195,6 +195,93 @@
             If the app did not open, <a href="https://munk.sh">install Munk AI</a> first or paste the template URL in "Import Company".
           </p>
           <button type="button" class="toast-close" id="wake-toast-close" aria-label="Close">×</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container anatomy-section" aria-labelledby="anatomy-heading">
+      <div class="section-header">
+        <h2 id="anatomy-heading">
+          <span class="zh">一个团队目录长什么样？</span>
+          <span class="en">What's Inside a Team Directory?</span>
+        </h2>
+        <p class="section-sub">
+          <a href="https://open-company.org">
+            <span class="zh">阅读完整 <code>open-company/v0</code> 规范 →</span>
+            <span class="en">Read the full <code>open-company/v0</code> spec →</span>
+          </a>
+        </p>
+      </div>
+
+      <div class="anatomy-grid">
+        <div class="anatomy-code-box">
+          <div class="anatomy-code-head">
+            <span class="zh">标准目录结构</span>
+            <span class="en">Standard Directory Layout</span>
+            <code>open-company/v0</code>
+          </div>
+          <pre class="anatomy-pre zh"><code>open-source-software/
+├── Companyfile.yaml        # 团队身份声明
+├── AGENTS.md               # 全员共享的目标、分工边界与红线
+├── projects/
+│   └── daily-patrol/       # 团队级公共班次（如 21:00 晚间复盘）
+└── products/
+    └── open-compare/
+        ├── Productfile.yaml # 绑定产品与代码仓库
+        ├── AGENTS.md        # 产品功能优先级与验收底线
+        └── projects/github/
+            ├── guards/      # 零 Token 预检脚本（有事才唤醒 Agent）
+            └── tasks/*.md   # 日常值班任务（时间表 + 职责说明）</code></pre>
+          <pre class="anatomy-pre en"><code>open-source-software/
+├── Companyfile.yaml        # Declares the team identity
+├── AGENTS.md               # Shared goals, role boundaries &amp; rules
+├── projects/
+│   └── daily-patrol/       # Team-wide shifts (e.g., 21:00 review)
+└── products/
+    └── open-compare/
+        ├── Productfile.yaml # Binds product &amp; git repository
+        ├── AGENTS.md        # Product scope, priorities &amp; QA bar
+        └── projects/github/
+            ├── guards/      # Zero-token preflight checks
+            └── tasks/*.md   # Standing shifts (cron + instructions)</code></pre>
+        </div>
+
+        <div class="anatomy-steps">
+          <div class="step-item">
+            <span class="step-num">1</span>
+            <div>
+              <h3>
+                <span class="zh">纯文本定义，跨服务商通用</span>
+                <span class="en">Plain Files, Provider-Agnostic</span>
+              </h3>
+              <p class="zh">目标、角色边界与定时排班全部写在 YAML 与 Markdown 文件里。无论是 Claude、GPT、Gemini 还是本地模型，都能对着同一份目录协同工作。</p>
+              <p class="en">Goals, role boundaries, and schedules live in plain YAML and Markdown. Claude, GPT, Gemini, or local models can coordinate off the exact same folder.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              <h3>
+                <span class="zh">零成本脚本守门，有事才唤醒 Agent</span>
+                <span class="en">Zero-Token Guards Before Every Shift</span>
+              </h3>
+              <p class="zh">高频巡检任务（如每 5 分钟盯一次 GitHub）先跑轻量 Node.js 脚本（<code>guards/*.mjs</code>），确认有新 Issue 或报错才消耗 Token 唤醒 Agent。</p>
+              <p class="en">High-frequency shifts run a lightweight Node.js script (<code>guards/*.mjs</code>) first—waking an LLM agent only when new issues or failures appear.</p>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              <h3>
+                <span class="zh">一键导入，先预览再开启排班</span>
+                <span class="en">One-Click Import, Safe by Default</span>
+              </h3>
+              <p class="zh">导入时先预览所有文件与脚本；不含任何写死密钥，所有定时排班默认处于关闭状态，由你确认后再启动运转。</p>
+              <p class="en">Preview all tasks and guards before writing; no hardcoded secrets are included, and all schedules stay off until you turn them on.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
